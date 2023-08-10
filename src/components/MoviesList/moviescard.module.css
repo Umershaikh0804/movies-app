@@ -1,0 +1,24 @@
+.movie_card {
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+  width: 250px;
+  border: 2px solid white;
+  box-sizing: border-box;
+  background: #fff3f3;
+  transition: 0.5s;
+}
+.movie_card img {
+  height: 50%;
+  width: 100%;
+}
+.movie_card:hover{
+  box-shadow:0 0 200px 0px rgba(0,0,0,0.2);
+}
+.btn-Wrapper{
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
