@@ -1,0 +1,16 @@
+.shortlistmovie_card {
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+  width: 220px;
+  margin: 10px;
+     background-color: #2A3166; 
+    justify-content: center;
+    align-items: center;
+  border-radius: 10px;
+  margin-right: 30px;
+  }
+  .shortlistmovie_card img {
+    height: 50%;
+  width: 100%;
+  }
