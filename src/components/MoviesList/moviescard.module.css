@@ -10,7 +10,7 @@
   align-items: center;
   border-radius: 10px;
   margin-right: 30px;
-  transition: transform 0.3s; /* Add a transition for smooth animation */
+  transition: transform 0.3s; 
 }
 
 .movie_card:active {

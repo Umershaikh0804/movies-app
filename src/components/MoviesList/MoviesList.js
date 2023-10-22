@@ -23,6 +23,7 @@ export default function MoviesList({ data }) {
         search
     </i>
 </button>
+
 </div>
         <div style={{display:"flex",flexWrap:"wrap",}}>
         {filteredMovieList &&
@@ -30,14 +31,14 @@ export default function MoviesList({ data }) {
             <div key={movie.id}>
               <MovieCard 
               movie={movie}
-              title={movie?.title}
-              release_date={movie?.release_date}
-              original_language={movie?.original_language}
-              original_title={movie?.original_title}
-              popularity={movie?.popularity}
-              vote_average={movie?.vote_average}
-              vote_count={movie?.vote_count}
-              poster_path={movie?.poster_path}
+              // title={movie?.title}
+              // release_date={movie?.release_date}
+              // original_language={movie?.original_language}
+              // original_title={movie?.original_title}
+              // popularity={movie?.popularity}
+              // vote_average={movie?.vote_average}
+              // vote_count={movie?.vote_count}
+              // poster_path={movie?.poster_path}
                />
             </div>
           ))}

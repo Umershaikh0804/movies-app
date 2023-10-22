@@ -8,9 +8,9 @@ export default function Home() {
   const dispatch = useDispatch()
   const text = useSelector((state) =>state.text.text);
   const number = useSelector((state)=>state.text.number);
-  const [moviesData, setMoviesData] = useState([]);
+  const [moviesData, setMoviesData] = useState(null);
   useEffect(() => {
-    fetchPopularMovies(2);
+    fetchPopularMovies(3);
   }, []);
 
   const apiKey = "ec26d47c76d0dbbea152800348da2eaa";
@@ -19,21 +19,18 @@ export default function Home() {
 
   async function fetchPopularMovies(pageNumber) {
     try {
-      const response = await fetch(`${popularMoviesUrl}&page=${pageNumber}`);
-       //console.log(response)
+      const response=await fetch("https://api.themoviedb.org/3/movie/popular?api_key=ec26d47c76d0dbbea152800348da2eaa&language=en-US")
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
 
       const data = await response.json();
       setMoviesData(data.results);
-      console.log(data);
     } catch (error) {
       console.error("Fetch error:", error);
     }
   }
 
-   console.log(text);
 
   return (
     <div>
@@ -53,7 +50,9 @@ export default function Home() {
     <h2 style={{paddingTop:"10px",paddingBottom:"10px",fontSize:"40px",marginTop:"-30px",marginBottom:"10px",marginLeft:"700px"}}>Welcome to our website!</h2>
   </div>
 </section>
-      <MoviesList data={moviesData} />
+    {
+      moviesData && <MoviesList data={moviesData} />
+    }
     </div>
   );
 }

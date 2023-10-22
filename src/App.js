@@ -34,7 +34,7 @@ function App() {
           <MyContext.Provider value={{ text, setText }}>
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/moviedetails" element={<MovieDetails />} />
+              <Route path="/moviedetails/:id" element={<MovieDetails />} />
               <Route path="/shortlistedmovies" element={<ShortlistedMovies />} />
             </Routes>
           </MyContext.Provider>
